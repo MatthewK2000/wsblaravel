@@ -26,3 +26,11 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 });
+
+Route::get('car', [\App\Http\Controllers\CarController::class , 'ShowCarTable']);
+
+Route::view('addCar', 'forms.adduserform');
+Route::post('addCar', [\App\Http\Controllers\CarController::class , 'addCar']);
+
+
+
